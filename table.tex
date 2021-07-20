@@ -1,0 +1,103 @@
+\documentclass{article}[12pt, a4paper]
+\usepackage{mathrsfs,amsmath,amssymb,amsthm}
+\usepackage[table]{xcolor}
+\usepackage{multicol}
+\usepackage[paperwidth=28cm,paperheight=21cm,top=2cm,right=2cm,bottom=0.1mm,left=2cm]{geometry}
+‎\usepackage{tikz}
+\usepackage{array}
+\usepackage{eso-pic}‎
+‎\usepackage{makecell}
+
+\renewcommand\theadalign{bc}
+‎\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+‎\renewcommand\cellgape{\Gape[4pt]}‎
+
+%\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{P}[1]{%
+>{\vbox to 5ex\bgroup\vfill\centering\arraybackslash}%
+m{#1}%
+<{\vskip-\baselineskip\vfill\egroup}}
+\newcolumntype{'}{!{\vrule width 2pt}}
+
+‎\usetikzlibrary{calc}‎‎‎‎
+\usepackage{xepersian}
+\settextfont[Scale=1]{font.ttf}
+\defpersianfont\nbf[Scale=1]{fontB.ttf}‎‎
+\makeatletter
+\def\thickhline{%
+\noalign{\ifnum0=`}\fi\hrule \@height \thickarrayrulewidth \futurelet
+\reserved@a\@xthickhline}
+\def\@xthickhline{\ifx\reserved@a\thickhline
+\vskip\doublerulesep
+\vskip-\thickarrayrulewidth
+\fi
+\ifnum0=`{\fi}}
+
+\makeatother
+
+\newlength{\thickarrayrulewidth}
+\setlength{\thickarrayrulewidth}{4\arrayrulewidth}‎
+
+\begin{document}
+\AddToShipoutPictureBG{%
+\begin{tikzpicture}[overlay,remember picture]
+\draw[line width=3pt]
+($ (current page.north west) + (0.5cm,-0.5cm) $)
+rectangle
+($ (current page.south east) + (-0.5cm,0.5cm) $);
+\draw[line width=1.5pt]
+($ (current page.north west) + (0.8cm,-0.8cm) $)
+rectangle
+($ (current page.south east) + (-0.8cm,0.8cm) $);
+\end{tikzpicture}}
+\begin{center}
+\huge{ برنامه هفتگی اعضای هیأت علمی در نیمسال اول ‎1401‎ - ‎1400}
+‎\end{center}
+\vspace{0.5cm}
+‎‎\begin{flushright}
+\hspace{3cm} \Large{‎‎نام و نام خانوادگی: ‎‎نام استاد } \hspace{4cm}‎ ‎‎\Large{‏رشته و گرایش: مهندسی کامپیوتر-نرم افزار}
+\end{flushright}‎
+%---------------------------- Start Table Code
+\begin{table}[!ht]
+\renewcommand{\arraystretch}{2.3}
+\begin{center}
+\begin{tabular}{'c|>{‎\arraybackslash}P{1.75cm}|P{1.75cm}|>{‎\arraybackslash}P{1.75cm}|P{1.75cm}|c|>{‎\arraybackslash}P{1.75cm}|P{1.75cm}|>{‎\arraybackslash}P{1.75cm}|P{1.75cm}|>{‎\arraybackslash}P{1.75cm}|P{1.75cm}'}
+\thickhline
+\cellcolor{gray!15!white}{ایام هفته}&
+\cellcolor{gray!15!white}{\nbf{9-8}}&
+\cellcolor{gray!15!white}{\nbf{10-9}}&
+\cellcolor{gray!15!white}{\nbf{11-10}}&
+\cellcolor{gray!15!white}{\nbf{12-11}}&
+\cellcolor{gray!15!white}{}&
+\cellcolor{gray!15!white}{\nbf{14-13}}&
+\cellcolor{gray!15!white}{\nbf{15-14}}&
+\cellcolor{gray!15!white}{\nbf{16-15}}&
+\cellcolor{gray!15!white}{\nbf{17-16}}&
+\cellcolor{gray!15!white}{\nbf{18-17}}&
+\cellcolor{gray!15!white}{\nbf{19-18}}&
+\hline
+\cellcolor{gray!15!white}{\nbf{شنبه}}&
+\multicolumn{3}{c|}{متن} &  & \cellcolor{gray!15!white} &  & \multicolumn{3}{c|}{متن}&\multicolumn{2}{c'}{ }\\
+\hline
+\cellcolor{gray!15!white}{\nbf{یکشنبه}}& 
+\multicolumn{4}{c|}{تست} & \cellcolor{gray!15!white} & \multicolumn{5}{c|}{آزمایشی}&\\
+\hline
+\cellcolor{gray!15!white}{\nbf{دوشنبه}}& 
+ & \multicolumn{3}{c|}{عنوان} & \cellcolor{gray!15!white} &  & \multicolumn{4}{c|}{تست}&\\
+\hline
+\cellcolor{gray!15!white}{\nbf{سه شنبه}}& 
+ & \multicolumn{2}{c|}{تست} &  & \cellcolor{gray!15!white} & \multicolumn{2}{c|}{ } & \multicolumn{3}{c|}{عنوان}&\\
+\hline
+\cellcolor{gray!15!white}{\nbf{چهارشنبه}}& 
+متن &  & \multicolumn{2}{c|}{آزمایشی} & \cellcolor{gray!15!white} &  & متن &  & \multicolumn{3}{c'}{تست}\\
+\thickhline
+\end{tabular}
+‎\end{center}‎
+\end{table}
+%---------------------------- end table code
+‎‎\vspace{0.5cm}
+‎‎\begin{flushright}
+‎‎\hspace{1.7cm} \Large{‎‎‎‏امضا عضو هیات علمی}‎‎ \hspace{2cm}‎ \Large{امضا مدیر گروه} \hspace{2cm}‎ ‎‎\Large{امضا رئیس دانشکده} \hspace{2cm}‎ ‎‎\Large{امضا معاون آموزشی پژوهشی}
+\end{flushright}
+\end{document}
